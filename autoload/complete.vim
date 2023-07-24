@@ -37,7 +37,7 @@ export def Completor(findstart: number, base: string): any
 	if findstart == 1
 	    var context = line->matchstr('\v((\a+)\s+){1,3}$')
 	    if context->empty() || !executable('curl')
-		return []
+		return -2
 	    endif
 	    if googjob->job_status() ==? 'run'
 		googjob->job_stop('kill')
@@ -47,7 +47,6 @@ export def Completor(findstart: number, base: string): any
 	    googjob = job_start(cmd, {
 		out_cb: funcref('GotNextWords'),
 		stoponexit: 'kill',
-		out_timeout: 3000,
 	    })
 	    return line->len() + 1
 	elseif findstart == 2
