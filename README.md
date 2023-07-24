@@ -7,6 +7,8 @@ Viewer](https://books.google.com/ngrams/). No additional packages or databases a
 Google queries can be slow and can take over a second. However, Vim's responsiveness
 is not degraded since queries are asynchronous and results are cached.
 
+![image](https://i.imgur.com/HHDt2yh.png)
+
 # Requirements
 
 - Vim >= 9.0
