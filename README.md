@@ -1,7 +1,5 @@
 
-## This plugin is superceded by
-[ngram-complete](https://github.com/girishji/ngram-complete.vim). Please use it
-instead.
+## This plugin is superceded by [ngram-complete](https://github.com/girishji/ngram-complete.vim). Please use it instead.
 
 ---
 
