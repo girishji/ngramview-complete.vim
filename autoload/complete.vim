@@ -21,7 +21,13 @@ var googjob: job
 var Googcmd = (context) => $'https://books.google.com/ngrams/json?content={context}&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3'
 
 def GotNextWords(channel: channel, msg: string)
-    var words = msg->js_decode()
+    var words: list<any>
+    try
+	words = msg->js_decode()
+    catch /.*/
+	# E491 is thrown occasionally if msg is incomplete
+	echom $'Caught {v:exception}'
+    endtry
     if words->len() < 2
 	return
     endif

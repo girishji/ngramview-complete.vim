@@ -9,4 +9,4 @@ import 'vimcompletor.vim'
 import autoload '../autoload/complete.vim'
 
 autocmd VimCompleteLoaded User * ++once
-	    \ vimcompletor.Register('ngram', complete.Completor, ['text', 'markdown'], 12)
+	    \ vimcompletor.Register('ngramview', complete.Completor, ['text', 'markdown'], 12)

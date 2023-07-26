@@ -1,11 +1,21 @@
+
+## This plugin is superceded by
+[ngram-complete](https://github.com/girishji/ngram-complete.vim). Please use it
+instead.
+
+---
+
 # Ngram Completion Based on Google Ngrams Viewer
 
 This plugin is a helper for Vim completion plugin
 [Vimcomplete](https://github.com/girishji/vimcomplete). It suggests (completes)
 next word based on bigram, trigram and 4-gram word association by querying [Google Ngrams
 Viewer](https://books.google.com/ngrams/). No additional packages or databases are required.
-Google queries can be slow and can take over a second. However, Vim's responsiveness
-is not degraded since queries are asynchronous and results are cached.
+
+_**Note:** Google ngram queries can be slow and can take over a second. However,
+Vim's responsiveness is not affected because queries are asynchronous (`:h job`) and results
+are cached. I implemented this out of curiosity but I do not find it very
+useful. Your mileage may vary._
 
 ![image](https://i.imgur.com/HHDt2yh.png)
 
